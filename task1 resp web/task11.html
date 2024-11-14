@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erased Tapes Records Blog Post</title>
+    <link rel="stylesheet" href="12.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Protest+Guerrilla&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<style>
+/* Base styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e9e9e9;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Heading styles */
+
+h1, h2, .main-title, .sub-title {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 48px; /* 3x default 16px */
+}
+
+
+h1 {
+    font-size: 96px;
+    font-weight: bold;  
+}
+
+
+
+/* Container styles */
+
+.white-container-box {
+    text-align: center;
+    max-width: 80%;
+    margin: 40px auto;
+}
+
+
+
+
+.white-container-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* Navigation links container */
+
+.nav-links {
+    text-align: center;
+    display: flex;
+    gap: 136px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: red; /* Changes the text color to red on hover */
+    text-decoration: underline; /* Adds an underline on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+
+/* Main content section */
+
+#main-content {
+    background-color: white;
+    padding: 0px;
+    border: 1px solid #000000;
+    margin: 40px auto;
+    max-width: 80%;
+    margin-bottom: 0;
+}
+
+
+.title {
+    font-size: 96px;
+    padding: 50px;
+    margin: 20px 0 20px 0;
+   
+}
+
+
+.subtitle {
+    font-size: x-large;
+    margin: 20px 50px;
+}
+
+
+.grid-container {
+    column-count: 3;
+    padding: 0 50px 50px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.featured {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.album-cover {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+
+.featured img,
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Author section styles */
+
+.author {
+    text-align: left;
+    padding: 50px 50px;
+}
+
+
+.author_section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 63px;
+    align-items: center;
+}
+
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.text-content h2 {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.text-content p {
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+.author img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Footer styles */
+
+footer {
+    text-align: center;
+    background-color:  #14181d;
+    color: white;
+    padding: 20px;
+}
+
+
+/* Media Query for Desktop */
+@media screen and (min-width: 1024px) {
+    /* General Margin and Padding for Desktop */
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px
+    }
+
+
+    .white-container-box img {
+        width: 200px;
+    }
+
+
+    .nav-links {
+        gap: 50px;
+        justify-content: center;
+    }
+
+
+    .subtitle {
+        font-size: x-large;
+    }
+
+
+    #main-content {
+        background-color: #ffffff;
+    border: 1px solid #000000;
+    margin: 50px auto;
+    max-width: 80%;
+    margin-bottom: 50px;
+    }
+
+
+    .author {
+        padding: 50px;
+    }
+
+    footer {
+    padding: 50px;
+    }
+}
+
+
+/* Media Query for Tablet */
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    body {
+        background-color: #ffffff;
+        font-family: sans-serif;
+        align-content: center;
+    }
+
+
+    .header {
+        text-align: center;
+        padding: 30px;
+    }
+
+
+    .white-container-box img  {
+        width: 80px;
+        height: 80px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        margin: 30px;
+    }
+
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+
+    .main-content {
+        max-width: 800px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border: 1px solid #000;
+    }
+
+
+    .title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+    .subtitle {
+        margin-bottom: 30px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+    .heading {
+        font-size: 36px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .grid-container {
+        column-count: 1;
+        margin-bottom: 30px;
+    }
+
+
+    .grid-container{
+        text-align: left;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .featured{
+        display: none;
+    }
+    .album-cover {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+   
+    .album-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+   
+    .author-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+
+    .author-content {
+        flex: 1;
+    }
+
+
+    .footer {
+        padding: 30px;
+    }
+
+
+    .content-lines {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+/* Large Mobile */
+@media (min-width: 540px) and (max-width: 720px) {
+    .main-content {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        
+    }
+    .white-container-box img{
+        width: 80px;
+        height: 80px;
+    }
+    .white-container-box{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+
+
+    .title{
+        font-size: 32px;
+        padding: 20px;
+        margin: 20px 0 20px 0;
+        text-align: center;
+    }
+
+
+    .subtitle {
+        font-size: 20px;
+        margin: 20px 20px;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .featured{
+        display: none;
+    }
+    .album-cover {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+   
+    .album-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    .grid-container {
+        column-count: 1;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .grid-container h2{
+        text-align: center;
+    }
+
+
+    .author_section{
+        display: flex;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* Small Mobile */
+@media (max-width: 540px) {
+    .main-content {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        
+    }
+    .white-container-box img{
+        width: 80px;
+        height: 80px;
+    }
+    .white-container-box{
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+.nav-links a{
+    margin: auto;
+}
+    .title{
+        font-size: 38px;
+        padding: 12px;
+        margin: 12px 0 12px 0;
+        text-align: center;
+    }
+
+
+    .subtitle {
+        font-size: 20px;
+        margin: 12px 12px;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .featured{
+        display: none;
+    }
+    .album-cover {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+   
+    .album-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    .grid-container {
+        column-count: 1;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+
+    .grid-container h2{
+        text-align: center;
+    }
+
+
+    .author_section{
+        display: flex;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .footer {
+        padding: 12px;
+    }
+}
+</style>
+
+    <header id="header">
+        <div class="white-container-box">
+            <img src="logo.svg" alt="Logo" id="logo">
+            <nav class="nav-links">
+                <a href="#blog">Our Blog</a>
+                <a href="#artists">Our Artists</a>
+                <a href="#story">Our Story</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+        <section class="hero">
+            <h1 class="title">Erased Tapes: Exploring the Sonic Frontier</h1>
+           
+            <p class="subtitle">Lorem ipsum odor amet, consectetuer adipiscing elit. Mi eu scelerisque turpis posuere tempor? Leo condimentum himenaeos molestie elit; maximus iaculis proin nulla. Ullamcorper nibh cras conubia suscipit dapibus sagittis, facilisi habitant vivamus. Etiam fusce posuere himenaeos ipsum commodo sollicitudin himenaeos nec.</p>
+        </section>
+
+
+        <section class="grid-container">
+            <article class="article">
+                <h2 class="heading">Heading</h2>
+                <p>
+                Montes ridiculus mus tellus nunc vulputate. Cras facilisi congue et facilisis porttitor litora etiam praesent porttitor. Sollicitudin cubilia scelerisque diam taciti lacus. Dapibus penatibus augue dapibus sagittis; rhoncus accumsan. Accumsan urna et, ultrices placerat justo rutrum. Tristique mattis ante cras accumsan convallis phasellus fermentum magna. Rhoncus curabitur pharetra proin ante nam adipiscing accumsan hac. Rutrum efficitur nullam integer ut ex id. Pulvinar vel at vestibulum vivamus sed nascetur eget.
+
+Laoreet volutpat hendrerit est aliquam; fusce quam tempor. Nisi interdum praesent pellentesque non non blandit cubilia et. Aptent maximus vehicula nullam odio tempor. Placerat dis facilisis potenti iaculis, primis vivamus nec at magnis. Aadipiscing curabitur vestibulum imperdiet dolor primis. Inceptos penatibus inceptos eu habitasse aptent vehicula platea litora congue. Ultricies mauris fringilla rhoncus pharetra iaculis vitae. Venenatis himenaeos eget molestie dignissim consectetur tellus litora. Porta a iaculis mi primis rhoncus.
+
+Curae habitasse elementum amet nunc, natoque at. Tortor vel blandit sociosqu auctor aliquam maximus porta feugiat. Eros phasellus platea mauris condimentum natoque hendrerit tellus id. Ex imperdiet vitae maximus adipiscing neque quam tempor orci. Lobortis porta lacinia cubilia tellus vel placerat; facilisis mi euismod. Neque eu orci nulla penatibus elit nec.
+
+Parturient habitasse facilisis purus donec, enim platea maximus. Primis class varius augue sed class ultricies. Posuere curabitur tristique penatibus montes hac ac imperdiet. Risus per sociosqu, cursus leo condimentum ac fringilla. Nibh curabitur eros tempus nec; nam curae hendrerit. Mattis placerat maximus mollis praesent, eros adipiscing dui.
+   
+           
+               
+                </p>
+         
+            </article>
+            <article class="article">
+                <h2 class="heading">Heading</h2>
+                <p>
+                Habitasse ornare fames facilisis montes pulvinar habitasse fringilla. Risus porta cursus duis vivamus quam adipiscing nec. Ante at posuere eget aptent natoque vivamus ante. Aenean enim dapibus viverra sem efficitur. Felis nam semper integer justo in. Facilisi augue urna torquent lacinia facilisi inceptos. Natoque varius feugiat massa scelerisque natoque, cras tempor inceptos.
+
+Amet ac leo, imperdiet hac litora auctor. Suscipit congue duis sociosqu auctor euismod vivamus urna diam. Nunc enim himenaeos litora facilisi, tincidunt torquent. Eros sapien laoreet duis, volutpat rutrum pulvinar. Natoque semper sapien aptent quis habitant aliquam condimentum luctus. Tempus pellentesque congue varius dapibus pharetra. Fermentum diam auctor bibendum rhoncus leo. Vestibulum tincidunt fames convallis ligula semper porttitor.
+
+Magnis maximus morbi, litora accumsan vivamus facilisi etiam pharetra. Platea congue orci sagittis purus scelerisque. Velit taciti maecenas praesent nam lobortis metus vehicula habitasse porttitor. Porta gravida placerat lobortis litora elit feugiat venenatis. Cras magna himenaeos consequat aliquet ad nec pharetra. Ligula eleifend imperdiet aptent primis placerat. Nec magnis tempus vulputate ipsum ad sagittis mus.
+               
+                </p>
+         
+            </article>
+            <article class="article">
+                <h2 class="heading">Heading</h2>
+                <p>
+                Vulputate nullam tempus montes eu tellus integer adipiscing pulvinar. Pharetra eu luctus id a potenti. Pulvinar egestas conubia ante varius lobortis iaculis metus. Netus sem imperdiet hendrerit vehicula netus est gravida tortor. Nunc ridiculus per montes nulla, facilisis lacinia per leo. Hendrerit scelerisque nulla in suspendisse sit tortor sagittis. Suscipit dictumst ipsum laoreet cras egestas suscipit orci. Per molestie felis erat platea blandit commodo.
+
+Ad venenatis sapien habitant posuere donec porttitor vel nisi. Sodales laoreet donec diam rhoncus lectus euismod orci torquent curae. Fames rhoncus torquent sed convallis; potenti cras. Dictumst arcu libero nulla malesuada mi ridiculus platea. Interdum ullamcorper fringilla himenaeos mollis; in arcu pharetra massa. Nunc mauris taciti montes sapien molestie orci ac quis.
+               
+                </p>          
+            </article>
+        </section>
+
+
+        <div class="container">
+            <div class="featured">
+              <img src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\all-encores.jpg" alt="Featured Album">
+            </div>
+            <div class="album-cover">
+              <img src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\articulation.jpg" alt="Album Cover 1">
+            </div>
+            <div class="album-cover">
+              <img src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\blurred.jpg" alt="Album Cover 2">
+            </div>
+            <div class="album-cover">
+              <img src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\encores-2.jpg" alt="Album Cover 3">
+            </div>
+            <div class="album-cover">
+              <img src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\eulogy-for-evolution.jpg" alt="Album Cover 4">
+            </div>
+        </div>
+
+
+        <div class="author">
+            <div class="author_section">
+                <div class="text-content">
+                    <h2>The Author</h2>
+                    <p>Sapien leo scelerisque per convallis torquent nunc. Lobortis eleifend a nam sit turpis nostra. Tempus suspendisse libero curae faucibus lobortis litora bibendum praesent! Eget quam magna, diam commodo interdum sapien magnis. </p>
+                </div>
+                <img alt="profile" src="C:\Users\kashi\OneDrive\Desktop\task1 resp web\profile_picture.jpg" width="200"/>
+            </div>
+        </div>
+
+
+        <footer id="footer">
+            <p> Copyright &copy; 2023 Erased Disks Ltd</p>
+        </footer>
+
+
+
+    </main>
+
+</body>
+
+</html>
